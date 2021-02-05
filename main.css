@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  top: 0;
+  height: 100vh;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  /*! 創建彩色[ 斜線漸變 ]*/
+  background: linear-gradient(
+    45deg,
+    #f17c58,
+    #e94584,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #ff3706
+  );
+  /*! 水平延展6倍 */
+  background-size: 600% 100%;
+  /*! 啟用動畫 */
+  animation: gradient 16s linear infinite;
+  /*! 動畫來回折返顯示 */
+  animation-direction: alternate;
+}
+
+/*! 動畫關鍵畫格 */
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
